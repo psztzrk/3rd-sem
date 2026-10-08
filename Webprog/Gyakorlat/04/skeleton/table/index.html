@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- NE MÓDOSÍTSD! -->
+    <div id="app">
+      <main id="game">
+        <table id="board">
+          <tr class="board-row">
+            <td class="board-cell bg-gray">X</td>
+            <td class="board-cell bg-gray"></td>
+          </tr>
+          <tr class="board-row">
+            <td class="board-cell bg-gray"></td>
+            <td class="board-cell bg-gray"></td>
+          </tr>
+        </table>
+        <label for="row">Rows:</label>
+        <input
+          type="number"
+          name="row"
+          id="row-input"
+          value="2"
+          min="2"
+          max="8"
+        />
+        <label for="col">Columns:</label>
+        <input
+          type="number"
+          name="col"
+          id="col-input"
+          value="2"
+          min="2"
+          max="8"
+        />
+        <button id="new-game">New Game</button>
+      </main>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

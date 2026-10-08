@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Badge Designer</h1>
+      <p>Create a badge from the form. Each valid click adds a new badge.</p>
+      <div class="controls">
+        <label>Name <input id="name-input" type="text" /></label>
+        <label
+          >Role
+          <select id="role-input">
+            <option value="Student">Student</option>
+            <option value="Mentor">Mentor</option>
+            <option value="Organizer">Organizer</option>
+          </select>
+        </label>
+        <label
+          >Background
+          <select id="color-input">
+            <option value="#dbeafe">Blue</option>
+            <option value="#dcfce7">Green</option>
+            <option value="#fef3c7">Yellow</option>
+          </select>
+        </label>
+        <button id="create-badge" type="button">Create badge</button>
+      </div>
+      <p id="message" role="status"></p>
+      <section id="badge-area" aria-label="Created badges"></section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

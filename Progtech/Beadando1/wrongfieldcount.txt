@@ -1,0 +1,10 @@
+4
+E
+S 500
+E
+2
+Anna greedy
+Betty careful
+1 2
+4 5
+3 3

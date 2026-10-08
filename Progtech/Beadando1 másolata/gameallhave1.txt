@@ -1,0 +1,12 @@
+5
+E
+E
+E
+E
+E
+3
+Anna greedy
+Betty careful
+Carmilla tactical
+1 2 3
+5 5 5

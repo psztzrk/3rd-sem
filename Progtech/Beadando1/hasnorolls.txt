@@ -1,0 +1,16 @@
+10
+E
+E
+S 500
+L 300
+E
+E
+E
+L 300
+E
+E
+4
+Anna greedy
+Betty careful
+Carmilla tactical
+Damian careful

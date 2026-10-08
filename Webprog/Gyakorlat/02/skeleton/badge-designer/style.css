@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: #172033;
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
+}
+main {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 16px;
+}
+h1 {
+  margin-top: 0;
+}
+.controls {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+label {
+  display: grid;
+  gap: 4px;
+  font-weight: 600;
+}
+input,
+select,
+button {
+  font: inherit;
+  padding: 9px 12px;
+}
+button {
+  cursor: pointer;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+#message {
+  min-height: 24px;
+  color: #b91c1c;
+}
+#badge-area {
+  display: grid;
+  gap: 16px;
+}
+.badge {
+  padding: 20px;
+  border-radius: 12px;
+}
+#tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tile {
+  min-width: 120px;
+  padding: 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+#shopping-list {
+  padding-left: 24px;
+}
+#shopping-list li {
+  margin: 10px 0;
+}
+#shopping-list button {
+  margin-left: 12px;
+}
+@media (max-width: 800px) {
+  main {
+    margin: 16px;
+    padding: 20px;
+  }
+}

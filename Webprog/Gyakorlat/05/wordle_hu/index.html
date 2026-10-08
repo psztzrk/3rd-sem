@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wordle Clone</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <header id="top-bar">
+        <h1 id="title">WORDLE</h1>
+      </header>
+      <main id="game">
+        <div id="timer">Time: 0 s</div>
+        <table id="board">
+          <tr class="board-row" id="board-row0">
+            <td class="board-key" id="board-key00"></td>
+            <td class="board-key" id="board-key01"></td>
+            <td class="board-key" id="board-key02"></td>
+            <td class="board-key" id="board-key03"></td>
+            <td class="board-key" id="board-key04"></td>
+          </tr>
+          <tr class="board-row" id="board-row1">
+            <td class="board-key" id="board-key10"></td>
+            <td class="board-key" id="board-key11"></td>
+            <td class="board-key" id="board-key12"></td>
+            <td class="board-key" id="board-key13"></td>
+            <td class="board-key" id="board-key14"></td>
+          </tr>
+          <tr class="board-row" id="board-row2">
+            <td class="board-key" id="board-key20"></td>
+            <td class="board-key" id="board-key21"></td>
+            <td class="board-key" id="board-key22"></td>
+            <td class="board-key" id="board-key23"></td>
+            <td class="board-key" id="board-key24"></td>
+          </tr>
+          <tr class="board-row" id="board-row3">
+            <td class="board-key" id="board-key30"></td>
+            <td class="board-key" id="board-key31"></td>
+            <td class="board-key" id="board-key32"></td>
+            <td class="board-key" id="board-key33"></td>
+            <td class="board-key" id="board-key34"></td>
+          </tr>
+          <tr class="board-row" id="board-row4">
+            <td class="board-key" id="board-key40"></td>
+            <td class="board-key" id="board-key41"></td>
+            <td class="board-key" id="board-key42"></td>
+            <td class="board-key" id="board-key43"></td>
+            <td class="board-key" id="board-key44"></td>
+          </tr>
+          <tr class="board-row" id="board-row5">
+            <td class="board-key" id="board-key50"></td>
+            <td class="board-key" id="board-key51"></td>
+            <td class="board-key" id="board-key52"></td>
+            <td class="board-key" id="board-key53"></td>
+            <td class="board-key" id="board-key54"></td>
+          </tr>
+        </table>
+        <table id="keyboard">
+          <tr class="keyboard-row">
+            <td class="keyboard-key">Q</td>
+            <td class="keyboard-key">W</td>
+            <td class="keyboard-key">E</td>
+            <td class="keyboard-key">R</td>
+            <td class="keyboard-key">T</td>
+            <td class="keyboard-key">Y</td>
+            <td class="keyboard-key">U</td>
+            <td class="keyboard-key">I</td>
+            <td class="keyboard-key">O</td>
+            <td class="keyboard-key">P</td>
+          </tr>
+          <tr class="keyboard-row">
+            <td class="keyboard-spacer"></td>
+            <td class="keyboard-key">A</td>
+            <td class="keyboard-key">S</td>
+            <td class="keyboard-key">D</td>
+            <td class="keyboard-key">F</td>
+            <td class="keyboard-key">G</td>
+            <td class="keyboard-key">H</td>
+            <td class="keyboard-key">J</td>
+            <td class="keyboard-key">K</td>
+            <td class="keyboard-key">L</td>
+            <td class="keyboard-spacer"></td>
+          </tr>
+          <tr class="keyboard-row">
+            <td class="keyboard-spacer"></td>
+            <td class="keyboard-key">↲</td>
+            <td class="keyboard-key">Z</td>
+            <td class="keyboard-key">X</td>
+            <td class="keyboard-key">C</td>
+            <td class="keyboard-key">V</td>
+            <td class="keyboard-key">B</td>
+            <td class="keyboard-key">N</td>
+            <td class="keyboard-key">M</td>
+            <td class="keyboard-key">←</td>
+            <td class="keyboard-spacer"></td>
+          </tr>
+        </table>
+        <button id="new-game">New Game</button>
+      </main>
+    </div>
+    <script type="module" src="script.js" defer></script>
+  </body>
+</html>

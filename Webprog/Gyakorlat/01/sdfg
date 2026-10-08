@@ -1,0 +1,88 @@
+//Ctrl+Shift+j
+
+
+let x = 5; //blokkszintű változó
+const y = 10; // konstans változó
+var z = 15; // KERÜLJÜK!! elavult
+
+
+/*Primitív típusok:
+Boolean: true, false;
+null: érték nélküli változó
+undefined: iniciálatlan változó
+Number: 5, 3.14, NaN (Not a Number - pl 0-val szorzás esetén), Infinity
+Bigint: 9007199254740991n
+String: "Hello World", 'Hello World', " "
+Symbol: egyedi azonosító
+
+
+Összetett típusok:
+object: { key1: "value1", key2: "value2" }
+array: [1, 2, 3, 4, 5], [] -> végtelen nagy lehet?
+function: function myFunction() {return "Hello World"}
+
+foorás: MDN Web Docs
+
+
+Típusokon végeztt műveletek:
+Number és BigInt: +,-,*,/ % ** ++ --
+string: + (összefűzés)
+Boolean: &&, ||, !
+Összehasonlytó operátorok: ==, !=, ===, !==, <, >, <=, >=, instanceof
+Hozzárendelő operátorok: =, +=, -= ...stb
+
+
+Típuskényszerítés:
+
++ operátor
+Number + Number -> összeadás
+Object + _ -> összeadás
+minden más esetben -> összefűzés, illetve operandusok szöveggé konvertálása (toString() fgv.)
+
+false értékek: false, 0, -0, 0n, "", null, undefined, NaN -> mind false-nak számít
+
+true -> 1  --> true+true=2
+false -> 0
+
+== : típuskonverziót végez
+===: típusazonosságot is ellenőríz
+
+- operátor: mindig számként kezeli az operandusokat
+
+
+Elágazások:
+
+if / else if / else
+
+harmas operátor
+let result = x % 2 === 0
+? "páros"
+: "páratlan"
+
+switch case
+
+
+Ciklusok:
+
+for
+while
+do while
+for ... in 
+for ... of  --> tömbökre
+
+
+Függvények:
+function
+    function add(a, b){
+    return a + b
+    }  --> ha nincs return, undefined lesz
+
+lambda
+    const add = (a,b ) => a + b
+többsoros lambda
+
+
+
+
+*/
+

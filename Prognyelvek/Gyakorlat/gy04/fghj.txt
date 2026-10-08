@@ -1,0 +1,2 @@
+package mindig kis betű
+osztály mindig nagy betű

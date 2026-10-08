@@ -1,0 +1,14 @@
+5
+E
+S 500
+E
+L 300
+E
+3
+Anna greedy
+Betty careful
+Carmilla tactical
+1 4 2
+2 6 4
+6 4 4
+4 3 6
