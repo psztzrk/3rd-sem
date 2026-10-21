@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/02/02.iml" filepath="$PROJECT_DIR$/02/02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Gyakorlat.iml" filepath="$PROJECT_DIR$/.idea/Gyakorlat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01/Hallgato/Hallgato.iml" filepath="$PROJECT_DIR$/01/Hallgato/Hallgato.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01/People/People.iml" filepath="$PROJECT_DIR$/01/People/People.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01/Queue/Queue.iml" filepath="$PROJECT_DIR$/01/Queue/Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/idk06/idk06.iml" filepath="$PROJECT_DIR$/idk06/idk06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpgame/rpgame.iml" filepath="$PROJECT_DIR$/rpgame/rpgame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vehiclesnoob/vehiclesnoob.iml" filepath="$PROJECT_DIR$/vehiclesnoob/vehiclesnoob.iml" />
+    </modules>
+  </component>
+</project>
