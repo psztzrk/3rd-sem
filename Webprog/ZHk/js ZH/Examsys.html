@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://webprogramozas.inf.elte.hu:8081/exams/3 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="wVDVoPLTHvKnai3YF5mMGlhxjvXHIUm0R8UdNyXg">
+        <title>Exam system</title>
+        <link rel="preload" as="style" href="./Examsys_files/app-maMm1sl5.css"><link rel="preload" as="style" href="./Examsys_files/app-QK75DIiS.css"><link rel="modulepreload" href="./Examsys_files/app-INjwPj7o.js.letöltés"><link rel="modulepreload" href="https://webprogramozas.inf.elte.hu:8081/build/assets/_commonjsHelpers-5-cIlDoe.js"><link rel="modulepreload" href="./Examsys_files/app-u6Y9Y5df.js.letöltés"><link rel="stylesheet" href="./Examsys_files/app-maMm1sl5.css"><link rel="stylesheet" href="./Examsys_files/app-QK75DIiS.css"><script type="module" src="./Examsys_files/app-INjwPj7o.js.letöltés"></script><script type="module" src="./Examsys_files/app-u6Y9Y5df.js.letöltés"></script>    </head>
+    <body class="font-sans antialiased">
+        <header>
+            <div class="text-center">
+                <div class="text-white text-4xl font-bold">EXAM SYSTEM</div>
+                                    <div class="text-white text-3xl pt-4 font-medium uppercase">
+                        Pásztor Alexa Zorka - IOSDX4
+                    </div>
+                            </div>
+        </header>
+
+        <main class="mx-auto container mt-8" style="margin-bottom: 136px;">
+            <div class="grid grid-cols-5">
+                <div>
+                    <div class="grid grid-cols-1 pr-8 gap-y-4">
+                                                    <div class="grid grid-cols-2 gap-4 px-4">
+                                <form method="POST" action="https://webprogramozas.inf.elte.hu:8081/lang/en">
+                                    <input type="hidden" name="_token" value="wVDVoPLTHvKnai3YF5mMGlhxjvXHIUm0R8UdNyXg" autocomplete="off">                                    <img class="cursor-pointer" onclick="this.closest('form').submit()" src="./Examsys_files/en-WbmkKp-A.png">
+                                </form>
+
+                                <form method="POST" action="https://webprogramozas.inf.elte.hu:8081/lang/hu">
+                                    <input type="hidden" name="_token" value="wVDVoPLTHvKnai3YF5mMGlhxjvXHIUm0R8UdNyXg" autocomplete="off">                                    <img class="cursor-pointer" onclick="this.closest('form').submit()" src="./Examsys_files/hu-x4I6spgi.png">
+                                </form>
+                            </div>
+
+                            <a href="https://webprogramozas.inf.elte.hu:8081/exams">
+                                <div class="w-full button">My exams </div>
+                            </a>
+
+                            <a href="https://webprogramozas.inf.elte.hu:8081/files">
+                                <div class="w-full button">My materials </div>
+                            </a>
+
+                            
+                            <form method="POST" action="https://webprogramozas.inf.elte.hu:8081/logout">
+                                <input type="hidden" name="_token" value="wVDVoPLTHvKnai3YF5mMGlhxjvXHIUm0R8UdNyXg" autocomplete="off">                                <a onclick="this.closest('form').submit()" href="https://webprogramozas.inf.elte.hu:8081/exams/3#">
+                                    <div class="w-full button">Log out </div>
+                                </a>
+                            </form>
+
+                        
+                    </div>
+
+                </div>
+                <div class="col-span-4">
+                    <div class="pb-4">
+    <h1>JavaScript évfolyam ZH 1.</h1>
+    <b>Start time:</b> <span>2026-11-02 17:45:00</span><br>
+    <b>Deadline: <span class="text-red-500">2026-11-02 19:45:00</span></b>
+    </div>
+
+    <div class="w-full text-justify" id="exammain">
+        <h2>Tudnivalók</h2>
+<h3>Mit tegyek a ZH kezdése előtt?</h3>
+<ul>
+<li><strong>Készíts ki egy fényképes okmányt az asztalra:</strong> Ez lehet személyi igazolvány, vezetői engedély, útlevél vagy ELTE-s diákigazolvány is — a lényeg, hogy ez alapján beazonosítható legyél.</li>
+<li><strong>Pakold a cuccaidat a terem szélére, a telefonod hagyd a táskádban:</strong> A ZH során semmilyen saját tárgy nem lehet az asztalon. A kabátokat és táskákat a fal mellé kell helyezni. Telefon, pendrive, stb sem lehet nálad. Ha ilyet találunk, az azonnali bukást jelent a tárgyból. Érdemes a zsebeket is kiüríteni a félreértések elkerülése végett.</li>
+<li><strong>Hidratálj és menj el mosdóba is:</strong> A ZH során a termet ideiglenesen elhagyni nem lehet — a teremből való kilépés a ZH automatikus befejezését jelenti.</li>
+<li><strong>Töltsd le a segédanyagaidat:</strong> Ha töltöttél fel segédanyagokat a ZH rendszerbe, érdemes most letölteni és elrendezni őket.</li>
+</ul>
+<h3>Meddig írhatom?</h3>
+<ul>
+<li>A ZH munkaideje <strong>2 óra</strong>, várható befejezése 19:45, ami az ültetés okozta esetleges csúszás függvényében tolódhat. A pontos időadatot a ZH rendszerben láthatod.</li>
+<li>Az időkeret <strong>magába foglalja</strong> a feladatok megoldása mellett a kiinduló állományok letöltését, a feladat értelmezését, a megoldás összekészítését és annak feltöltését.</li>
+<li>Ha a rendszer lezárt, utólagos hosszabbításra nincs lehetőség. A feladatot a ZH rendszerben megadott határidőig kell feltölteni, ezért javasoljuk, hogy <strong>a ZH utolsó 10 percében már csak a beadással foglalkozz!</strong> Az utolsó pillanatra hagyott sikertelen feltöltés ugyanúgy elégtelen érdemjeggyel jár.</li>
+<li>Ha korábban végzel, add be a végleges megoldásodat a rendszerben, majd <strong>csendben</strong> fáradj a terem ajtajához. Kérjük, <strong>várj meg</strong> egy felügyelőtanárt a teremből való kilépés előtt. <strong>Ne feledd, ha elhagyod a termet, nem jöhetsz vissza!</strong></li>
+</ul>
+<h3>Mit fogok használni?</h3>
+<ul>
+<li>A ZH kezdetekor a ZH rendszerben megjelenik a feladat leírása és letölthetővé válik egy kezdőcsomag. Ezt kell majd letöltened és kicsomagolnod. Két dolgot találsz benne: az elvégzendő feladatok kiinduló kódjait és a vizsgasegéd programot.</li>
+<li>Mindenképpen olvasd végig a <strong>Vizsgasegéd</strong> program dokumentációját, ugyanis ez téged segít, hogy minden technikai akadály nélkül oldhasd meg a feladatokat, és helyben meggyőződhess a megoldásod minőségéről.</li>
+<li>Az ExamAssistant segítségével a következő feladatok végezhetők el:
+<ul>
+<li>a README fájl kitöltése;</li>
+<li>a starter kód megnyitása VSCode-ban;</li>
+<li>a kód lokális tesztelése (gyorsabb ezt használni, és ugyanazok a tesztek futnak le, mint beadáskor);</li>
+<li>a kód kívánt formátumú becsomagolása (zip), és a tartalmazó mappa megnyitása.</li>
+</ul>
+</li>
+<li>A kód tesztelése tehát három módon valósulhat meg:
+<ul>
+<li>fejlesztés közbeni manuális tesztelés (szükséges)</li>
+<li>automatikus lokális tesztek (gyors)</li>
+<li>automatikus szerver tesztek (lassú)</li>
+</ul>
+</li>
+<li>A ZH közben, de legalább egyszer a végén az elkészült kódot fel kell tölteni a ZH rendszerbe. A ZH rendszer eltárolja a fájlt, és továbbküldi a Progenv rendszernek, ami az automatikus teszteléseket végzi. A pontszámot a ZH rendszer is kijelzi (jó esetben a lokális pontszámmal megegyező értékben), és a ZH után a Progenv rendszerben is látható lesz.</li>
+<li>A feltöltött segédanyagaid mellett használható még:
+<ul>
+<li>a <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> mint nyelvi dokumentáció</li>
+<li>az <a href="https://webprogramozas.inf.elte.hu/webprog/lectures-pdf/">előadásdiák</a> PDF-ben letölthető változtatai</li>
+</ul>
+</li>
+</ul>
+<h3>Mit NE használjak?</h3>
+<p>Többek közt:</p>
+<ul>
+<li>Emberi segítség (szinkron, aszinkron, chat, fórum, stb.), kivéve a felügyelő tanároktól történő segítségkérést.</li>
+<li>Mesterséges intelligencia (ChatGPT, Bing AI, GitHub Copilot, AI kódkiegészítést/segítséget tartalmazó kiegészítők, stb.).</li>
+<li>Általad összeválogatott VS Code kiegészítőket.</li>
+</ul>
+<h3>Mit kell még tudnom?</h3>
+<ul>
+<li>A feladatok (1, 2, 3) <strong>nem épülnek egymásra</strong>, tetszőleges sorrendben megoldhatók.</li>
+<li>A részfeladatok (a, b, c...) egy feladaton belül egymásra épülhetnek, de érdemes végigolvasni mindet, akkor is, ha át tervezed ugrani a feladatot, mert lehet független, egyszerűbb részfeladat.</li>
+<li>A feladatokban általában a <code>.js</code> fájl módosítása elegendő. Ha a HTML/CSS fájlokat módosítod, valószínűleg túlbonyolítod a megoldást.</li>
+<li>A feladatokat programozottan kell megoldani, nem beégetett megoldásokkal!</li>
+<li>Teljes pont csak működő, futásidejű hiba nélküli megoldásra adható.</li>
+</ul>
+        <br>
+        <h2>Lore</h2>
+<p>A NASA és az Európai Űrügynökség Magyarországra hozta a Kozmosz 2030 projektet. Ennek keretében új rendszereket kell kifejleszteni, hogy a jövőbeli felderítések és missziók zökkenőmentesen működhessenek még a távolság okozta kommunikációs időeltolódás mellett is.</p>
+<h2>Kezdőcsomag</h2>
+<p>A kezdőcsomagot <a href="https://webprogramozas.inf.elte.hu:8081/attachments/17">IDE kattintva</a> tudod letölteni. Csomagold ki, majd futtasd az <code>ExamAssistant.exe</code> programot!</p>
+<h2>Feladatok</h2>
+<h3>1. Űrmissziók (task-1, 12 pont)</h3>
+<p><img src="./Examsys_files/task_1.png" alt="Task 1"></p>
+<p>Készítsd el a fő statisztikákat az eddigi űrmissziókról!</p>
+<p>A <code>index.js</code> fájlban hozzáférsz a <code>data.js</code> fájlban definiált <code>spaceMissions</code> változóhoz.</p>
+<p>A <code>spaceMissions</code> egy tömb, amely űrküldetéseket leíró objektumokat tartalmaz. Minden küldetéshez az alábbi adatok tartoznak:</p>
+<ul>
+<li>a küldetés neve (<code>name</code>),</li>
+<li>az űrügynökség neve (<code>agency</code>),</li>
+<li>a küldetés éve (<code>year</code>),</li>
+<li>a küldetés célpontja (<code>destination</code>),</li>
+<li>emberes küldetés volt-e (<code>crewed</code>, boolean),</li>
+<li>a küldetés időtartama napokban (<code>durationDays</code>),</li>
+<li>sikeres volt-e a küldetés (<code>successful</code>, boolean),</li>
+<li>a küldetés költsége millió dollárban (<code>costMillionUSD</code>),</li>
+<li>valamint a küldetés során használt eszközök listája (<code>instruments</code>), tömb formájában.</li>
+</ul>
+<p>Oldd meg az alábbi feladatokat:</p>
+<ul>
+<li>a. (1 pont) A <code>taskA</code> elembe írd ki, hány küldetés volt összesen!</li>
+<li>b. (2 pont) A <code>taskB</code> elembe írd ki, volt-e legalább egy <em>sikertelen</em> küldetés!</li>
+<li>c. (2 pont) A <code>taskC</code> elembe írd ki, hogy használtak-e minden küldetésen legalább egy eszközt!</li>
+<li>d. (2 pont) A <code>taskD</code> elembe írd ki a sikeres <em>NASA-küldetések</em> neveit, vesszővel elválasztva!</li>
+<li>e. (2 pont) A <code>taskE</code> elembe írd ki azoknak a küldetéseknek a nevét, amelyek során <em>kamerát</em> használtak!</li>
+<li>f. (3 pont) A <code>taskF</code> elembe írd ki annak a sikeres küldetésnek a nevét, amelyik a legtöbbe került!</li>
+</ul>
+<h3>2. Felderítő útvonaltervező (task-2, 14 pont)</h3>
+<p><img src="./Examsys_files/task_2.gif" alt="Task 2"></p>
+<p>A felderítőszondák küldetéseit egy szektortérképen vezénylik az ügynükségek. A szektortérképen a szektor ismert bolygói láthatók, a nevük a cellájukban olvasható. Először össze kell állítanod a szonda repülési tervét: ebbe azoknak a bolygóknak a nevét veszed fel, amelyeket a szondának meg kell látogatnia. Ezután végig kell vezetned a szondát a térképen a tervben szereplő bolygókhoz.</p>
+<p>Az <code>index.html</code> és az <code>index.css</code> fájl már tartalmaz minden szükséges elemet és stílusosztályt, a megoldásodat az <code>index.js</code> fájlba írd! Az <code>index.js</code> már tartalmazza a szonda helyzetét tároló <code>probeRow</code> és <code>probeCol</code> változót, a <code>getCell(row, col)</code> segédfüggvényt, amely a táblázat adott sorában és oszlopában lévő cellát adja vissza, valamint az alább felsorolt elemeket tároló konstansokat (pl. <code>targetInput</code>, <code>route</code>, <code>moveUpButton</code>). Ezeket használd, de ne deklaráld újra őket, különben a teljes fájl hibával leáll!</p>
+<p>Az oldalon az alábbi elemeket találod:</p>
+<ul>
+<li>egy szöveges beviteli mezőt (<code>#target-input</code>) és egy gombot (<code>#add-target</code>) az úti célok felvételéhez,</li>
+<li>egy számozott listát (<code>ol#route</code>), amely a repülési tervet tartalmazza, és egy elemet (<code>#route-count</code>) a célok számának kiírásához,</li>
+<li>egy legördülő listát (<code>select#probe-select</code>), amelynek értékei: <code>voyager</code>, <code>pioneer</code>, <code>new-horizons</code>, valamint egy képet (<code>img#probe-image</code>),</li>
+<li>egy 7×7-es táblázatot (<code>table#sector</code>), amely a szektortérképet ábrázolja. Egyes cellák <code>asteroid</code> stílusosztályúak (aszteroidamező), mások <code>planet</code> stílusosztályúak, és a <code>data-name</code> attribútumukban a bolygó nevét tárolják,</li>
+<li>négy irányító gombot (<code>#move-up</code>, <code>#move-down</code>, <code>#move-left</code>, <code>#move-right</code>),</li>
+<li>egy elemet (<code>#status</code>) a küldetés állapotának kiírásához.</li>
+</ul>
+<p>Oldd meg az alábbi feladatokat:</p>
+<ul>
+<li>Repülési terv:
+<ul>
+<li>a. (1 pont) Az <code>#add-target</code> gombra kattintva a <code>#target-input</code> mező tartalmát vedd fel új listaelemként (<code>li</code>) az <code>#route</code> listába! A listaelem szövege a beírt név legyen.</li>
+<li>b. (1 pont) A beírt szöveg elejéről és végéről távolítsd el a szóközöket (<code>trim()</code>)! Ha így üres szöveg marad, ne kerüljön új elem a listába. Sikeres felvétel után ürítsd ki a beviteli mezőt!</li>
+<li>c. (2 pont) Kezeld a szonda kapacitását!
+<ul>
+<li>(1 pont) A <code>#route-count</code> elemben mindig a listában lévő úti célok száma legyen olvasható!</li>
+<li>(1 pont) Ha a lista elérte az 5 elemet, az <code>#add-target</code> gomb legyen letiltva (<code>disabled</code>)!</li>
+</ul>
+</li>
+<li>d. (1 pont) A <code>#probe-select</code> legördülő lista változásakor (<code>change</code>) a <code>#probe-image</code> kép <code>src</code> attribútumát állítsd <code>img/&lt;érték&gt;.svg</code>-re, ahol <code>&lt;érték&gt;</code> a kiválasztott opció értéke (pl. <code>img/voyager.svg</code>)!</li>
+</ul>
+</li>
+<li>Szektortérkép: a cellákon csak a <code>probe</code> stílusosztályt tedd fel, illetve vedd le; a többi stílusosztályuk (<code>asteroid</code>, <code>planet</code>) és a <code>data-name</code> attribútumuk maradjon meg (<code>classList</code>-et használj, ne <code>className</code>-et)! Az e–g. részfeladatok ezt is ellenőrzik.
+<ul>
+<li>e. (1 pont) Az oldal betöltésekor a szonda a táblázat bal felső cellájában (0. sor, 0. oszlop) legyen: a cella kapja meg a <code>probe</code> stílusosztályt! Mindig pontosan egy cellán legyen <code>probe</code> stílusosztály.</li>
+<li>f. (2 pont) Az irányító gombokra kattintva a szonda lépjen egy cellát a megfelelő irányba: a régi cellájáról kerüljön le, az újra kerüljön fel a <code>probe</code> stílusosztály! Ne felejtsd el frissíteni a <code>probeRow</code> és <code>probeCol</code> változót!
+<ul>
+<li>(1 pont) A <code>#move-right</code> gomb működik.</li>
+<li>(1 pont) Mind a négy gomb működik.</li>
+</ul>
+</li>
+<li>g. (2 pont) Ha a lépés nem lehetséges, a szonda maradjon a helyén!
+<ul>
+<li>(1 pont) A szonda ne hagyhassa el a térképet!</li>
+<li>(1 pont) A szonda ne léphessen <code>asteroid</code> stílusosztályú cellára!</li>
+</ul>
+</li>
+<li>h. (4 pont) Fejezd be a küldetést!
+<ul>
+<li>(2 pont) Ha a szonda olyan <code>planet</code> cellára lép, amelynek <code>data-name</code> értéke pontosan (kis- és nagybetűre is) megegyezik a repülési terv (<code>#route</code>) valamelyik elemének szövegével, akkor az a listaelem kapja meg a <code>visited</code> stílusosztályt! Csak a lépés pillanatában már felvett célokat kell megjelölni. <em>(Példa: ha a tervben szerepel a <code>Mars</code>, és a szonda a <code>data-name="Mars"</code> cellára lép, a <code>Mars</code> listaelem <code>visited</code> lesz. A <code>mars</code> vagy a térképen nem szereplő <code>Pluto</code> listaelem soha nem lesz <code>visited</code>.)</em></li>
+<li>(2 pont) Amikor a repülési terv minden eleme <code>visited</code> lett, írd ki a <code>#status</code> elembe: <code>Küldetés teljesítve!</code> (angolul <code>Mission complete!</code> is elfogadott). Addig a <code>#status</code> elem maradjon üres!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3. Naprendszer-vezérlő (task-3, 14 pont)</h3>
+<p><img src="./Examsys_files/task_3.gif" alt="Task 3"></p>
+<p>Készíts vezérlőpultot a Naprendszer modelljéhez! A bolygók távolságát, színét és gyűrűit lehessen változtatni. A vezérlők eseményeit <strong>delegálással</strong> kezeld!</p>
+<p>A megoldásodat az <code>index.js</code> fájlba írd! A <code>planets</code> tömböt alapértelmezés szerint a <code>data.js</code> fájlból töltjük be. A feladathoz a bolygók <code>name</code>, <code>type</code>, <code>distanceFromSun</code> (millió km), <code>diameter</code> (km) és <code>hasRings</code> adataira lesz szükséged.</p>
+<p>A bolygókat a <code>#planets</code> elembe generáld, a már ott lévő Nap mellé, a vezérlőket pedig az üres <code>#input-fields</code> elembe! Mindkét helyen találsz egy HTML-mintát megjegyzésként. A szükséges stílusok az <code>index.css</code> fájlban vannak; használd a feladatban megadott azonosítókat, stílusosztályokat, attribútumokat és eseményeket!</p>
+<p>A kezdőcsomagban három segédfüggvényt adtunk:</p>
+<ul>
+<li><code>delegate(parent, type, selector, handler)</code>: az előadáson bemutatott segédfüggvény. A <code>parent</code> elemen kezeli a <code>type</code> típusú eseményt, és ha az a <code>selector</code> szelektorra illeszkedő elemen (vagy azon belül) történt, meghívja a <code>handler</code> függvényt: ebben a <code>this</code> az illeszkedő elem, a paramétere pedig az eseményobjektum (ezért <code>function</code>-t adj át, ne nyílfüggvényt). Használata nem kötelező.</li>
+<li><code>distanceToPx(distance)</code>: a Naptól mért távolságot millió kilométerről pixelre váltja.</li>
+<li><code>diameterToPx(diameter)</code>: az átmérőt kilométerről pixelre váltja.</li>
+</ul>
+<p>Az <code>index.js</code> a <code>#input-fields</code> és a <code>#planets</code> elemet tároló <code>inputFields</code> és <code>planetsDiv</code> konstanst is tartalmazza; ezeket ne deklaráld újra!</p>
+<p>A <code>data-index</code> attribútumokban mindig a bolygó <code>planets</code> tömbbeli indexét használd (0, 1, 2, …)! A különböző típusok listáját programozottan állítsd elő a tömbből, az első előfordulásuk sorrendjében. A <strong>típusindex</strong> a típus helye ebben a listában: 0 – <code>rocky planet</code> / <code>kőzetbolygó</code>, 1 – <code>gas giant</code> / <code>gázóriás</code>, 2 – <code>ice giant</code> / <code>jégóriás</code>. A megjelenített típusneveket a betöltött adatokból vedd!</p>
+<ul>
+<li>Generálás
+<ul>
+<li>a. (1 pont) Minden bolygóhoz generálj egy <code>div</code> elemet <code>planet-control</code> stílusosztállyal a <code>#input-fields</code> elembe, a <code>planets</code> tömb sorrendjében! Mindegyikben legyen egy <code>h3</code> elem a bolygó nevével.</li>
+<li>b. (2 pont) Minden <code>.planet-control</code> elembe generálj egy <code>planet-color</code> stílusosztályú legördülő listát (<code>select</code>)! A <code>data-index</code> attribútuma a bolygó indexe legyen.
+<ul>
+<li>(1 pont) Az <code>option</code> elemek a különböző bolygótípusokat tartalmazzák a típusindex sorrendjében. A <code>value</code> értékük a típusindex, a szövegük a típus neve legyen!</li>
+<li>(1 pont) Kezdetben a bolygó saját típusa legyen kiválasztva!</li>
+</ul>
+</li>
+<li>c. (1 pont) Minden <code>.planet-control</code> elembe generálj egy csúszkát (<code>input</code>, <code>type="range"</code>) <code>planet-orbit</code> stílusosztállyal és a bolygó indexével a <code>data-index</code> attribútumában! A <code>min</code> értéke <code>0</code>, a <code>max</code> értéke <code>500</code>, a kezdőértéke pedig <code>distanceToPx(distanceFromSun)</code> legyen.</li>
+<li>d. (1 pont) Minden <code>.planet-control</code> elembe generálj egy jelölőnégyzetet (<code>input</code>, <code>type="checkbox"</code>) <code>planet-rings</code> stílusosztállyal és a bolygó indexével a <code>data-index</code> attribútumában! Akkor legyen bejelölve (<code>checked</code>), ha a bolygónak van gyűrűje (<code>hasRings</code>). A mintában szereplő <code>label</code> elem használata nem kötelező.</li>
+<li>e. (2 pont) Minden bolygóhoz generálj egy <code>span</code> elemet <code>planet</code> stílusosztállyal a <code>#planets</code> elembe! A <code>data-index</code> attribútumába a bolygó indexét, a <code>title</code> attribútumába a bolygó nevét írd.
+<ul>
+<li>(1 pont) A <code>span</code> kapja meg a <code>type-&lt;típusindex&gt;</code> stílusosztályt (pl. a Mars <code>type-0</code>, a Jupiter <code>type-1</code>), és ha a bolygónak van gyűrűje, a <code>rings</code> stílusosztályt is!</li>
+<li>(1 pont) A <code>span</code> <code>left</code> stílustulajdonsága <code>distanceToPx(distanceFromSun)</code>, a szélessége (<code>width</code>) és a magassága (<code>height</code>) pedig <code>diameterToPx(diameter)</code> pixel legyen (pl. a Mars esetén <code>left: 106px</code>, <code>width: 12px</code>, <code>height: 12px</code>)!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Eseménykezelés
+<ul>
+<li>f. (2 pont) Egy <code>.planet-orbit</code> csúszka mozgatásakor (<code>input</code> esemény) állítsd az azonos <code>data-index</code> értékű bolygó <code>left</code> stílustulajdonságát a csúszka értékére, pixelben!</li>
+<li>g. (1 pont) Egy <code>.planet-color</code> lista változásakor (<code>change</code> esemény) az azonos <code>data-index</code> értékű bolygó kapja meg a kiválasztott típushoz tartozó <code>type-&lt;típusindex&gt;</code> stílusosztályt! Az előző típus stílusosztályát távolítsd el; egyszerre csak egy <code>type-*</code> stílusosztály legyen rajta!</li>
+<li>h. (1 pont) Egy <code>.planet-rings</code> jelölőnégyzet változásakor (<code>change</code> esemény) az azonos <code>data-index</code> értékű bolygón akkor legyen <code>rings</code> stílusosztály, ha a jelölőnégyzet be van jelölve! Ellenkező esetben távolítsd el róla!</li>
+<li>i. (3 pont) Az f–h. részfeladatokat <strong>delegálással</strong> oldd meg: az eseménykezelőket ne az egyes vezérlőkre, hanem egy közös ősükre (pl. a <code>#input-fields</code> elemre) regisztráld! Használhatod a megadott <code>delegate</code> függvényt, vagy az <code>event.target</code>-et is. Vezérlőtípusonként 1 pont jár: csúszka, legördülő lista, jelölőnégyzet.</li>
+</ul>
+</li>
+</ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const output = document.querySelector('#timeleft')
+            const main = document.querySelector('main')
+            const footer = document.querySelector('footer')
+            const leftOnLoad = -47575405.498
+            const loadTime = Date.now()
+
+            const formatAsHMS = (time) => {
+                const h = Math.floor(time / 3600)
+                const m = Math.floor((time % 3600) / 60)
+                const s = time % 60
+                const fm = m.toString().padStart(2, '0')
+                const fs = s.toString().padStart(2, '0')
+                return `${h}:${fm}:${fs}`
+            }
+
+            const updateTimeLeft = () => {
+                const timeNow = Date.now()
+                const secondsLeft = Math.max(0, Math.floor((leftOnLoad - ( timeNow - loadTime)) / 1000))
+                output.innerHTML = formatAsHMS(secondsLeft)
+            }
+
+            const undoButtonSetup = () => {
+                const undoButton = document.querySelector('#undo')
+                const submitResult = document.querySelector('#submit_result')
+                const submitForm = document.querySelector('#submit_form')
+                if (undoButton !== null && submitResult !== null){
+                    undoButton.addEventListener('click', function(){
+                        submitResult.style.display = submitResult.style.display === 'block' ? 'none' : 'block'
+                        submitForm.style.display = submitForm.style.display === 'block' ? 'none' : 'block'
+                    })
+                }
+            }
+
+            const updateMargin = () => {
+                main.style.marginBottom = parseInt(window.getComputedStyle(footer).height.slice(0, -2)) + 12 + "px"
+            }
+
+            updateTimeLeft()
+
+            setInterval(() => {
+                updateTimeLeft()
+                updateMargin()
+            }, 500)
+
+            undoButtonSetup()
+
+            const renderPoints = (status, points, maxPoints, position) => {
+                const pointsElement = document.querySelector("#points")
+                const detailsElement = document.querySelector("#view-details")
+                const toRoute = "https://webprogramozas.inf.elte.hu:8081/submissions/:subId/evaluation"
+
+                const translate = {
+                    "error": {"en": "Error", "hu": "Hiba"},
+                    "waiting": {"en": "Queued", "hu": "Sorban"},
+                    "running": {"en": "Evaluating", "hu": "Értékelés"}
+                }
+
+                const loc = "en"
+
+                if (status == "SUCCESS"){
+                    pointsElement.innerText = `${points} / ${maxPoints}`
+                    pointsElement.style.color = `hsl(${points / maxPoints * 120}, 50%, 50%)`
+                } else if (status == "ERROR"){
+                    pointsElement.innerText = `❌${translate["running"][loc]}`
+                    pointsElement.style.color = "red"
+                } else if (status == "WAITING"){
+                    pointsElement.innerText = `⌛${translate["waiting"][loc]} (#${position})`
+                    pointsElement.style.color = "lightslategray"
+                } else if (status == "RUNNING"){
+                    pointsElement.innerText = `🧠${translate["running"][loc]}`
+                    pointsElement.style.color = "darkblue"
+                }
+                detailsElement.style.display = status == "SUCCESS" ? "inline-block" : "none";
+                detailsElement.onclick = () => {
+                    window.location = toRoute.replace(":subId", latestSubmissionId);
+                }
+            }
+
+            
+                        const latestSubmissionId = 46
+            renderPoints("SUCCESS", 0, 40, 0)
+                    })
+    </script>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="mx-auto container pb-4">
+
+            <div class="grid grid-cols-4 items-center">
+
+                <div class="pr-8">
+                    <h2 class="text-center">Time remaining </h2>
+                    <div id="timeleft" class="text-center text-4xl text-red-500 font-bold">0:00:00</div>
+                </div>
+
+                                <div class="col-span-2">
+                                    <h2 class="text-center">Submit your solution </h2>
+
+                    
+                    <form id="submit_form" style="display:none;" class="text-center" method="POST" action="https://webprogramozas.inf.elte.hu:8081/exams/3" enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="wVDVoPLTHvKnai3YF5mMGlhxjvXHIUm0R8UdNyXg" autocomplete="off">
+                                                    <span class="text-red-500 font-medium">You cannot upload your solution after the deadline.</span>
+                        
+                    </form>
+
+                                            <div id="submit_result" style="display:block" class="text-green-600 font-bold text-center">
+
+                        
+                        Successfully submitted file <a href="https://webprogramozas.inf.elte.hu:8081/submissions/46">IOSDX4_wp-js-2026-27-1-a.zip</a> at 2026-11-02 19:11:09!
+
+                                                </div>
+                                    </div>
+                                <div>
+                    <h2 class="text-center">Pontszám</h2>
+                    <div class="flex flex-row items-center justify-center">
+                        <div id="points" class="text-center text-4xl" style="color: rgb(191, 64, 64);">0 / 40</div>
+                        <button id="view-details" class="button ml-4" style="display: inline-block;">
+                                View details
+                        </button>
+                    </div>
+                </div>
+                            </div>
+        </div>
+        </footer>
+    
+
+</body></html>
