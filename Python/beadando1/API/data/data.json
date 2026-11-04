@@ -1,0 +1,72 @@
+{
+  "Guests": [
+    {
+      "id": 1,
+      "name": "Halász Henrik",
+      "email": "henrik@halaszbastya.hu",
+      "phone": "+36301234567"
+    },
+    {
+      "id": 2,
+      "name": "Pék Petra",
+      "email": "petra@kenyerkert.hu",
+      "phone": "+36209876543"
+    },
+    {
+      "id": 3,
+      "name": "Szakács Sándor",
+      "email": "sandor@fakanal.hu",
+      "phone": "+36705554433"
+    }
+  ],
+  "Tabs": [
+    {
+      "id": 101,
+      "guest_id": 1,
+      "table_no": 4,
+      "dishes": [
+        {
+          "dish_id": 201,
+          "name": "Gulyásleves",
+          "category": "leves",
+          "price": 2490.0,
+          "portions": 2
+        },
+        {
+          "dish_id": 202,
+          "name": "Rántott csirke",
+          "category": "főétel",
+          "price": 3990.0,
+          "portions": 1
+        },
+        {
+          "dish_id": 203,
+          "name": "Ásványvíz",
+          "category": "ital",
+          "price": 690.0,
+          "portions": 3
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "guest_id": 2,
+      "table_no": 7,
+      "dishes": [
+        {
+          "dish_id": 204,
+          "name": "Somlói galuska",
+          "category": "desszert",
+          "price": 1890.0,
+          "portions": 2
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "guest_id": 3,
+      "table_no": 12,
+      "dishes": []
+    }
+  ]
+}
