@@ -1,5 +1,6 @@
+public class Main{
 
-void main() {
-    BlackHole blackHole = new BlackHole();
-
+    public static void main(String[] args) {
+        new BlackHole();
+    }
 }
