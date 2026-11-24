@@ -1,3 +1,5 @@
+package model;
+
 public enum CellType {
     EMPTY,
     GREY_SHIP,
