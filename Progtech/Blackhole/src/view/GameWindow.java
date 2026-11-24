@@ -1,6 +1,13 @@
+package view;
+
+import model.Game;
+import model.Board;
+import model.CellType;
+import model.Direction;
+import model.MoveResult;
+
 import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
 
 public class GameWindow {
 
@@ -140,21 +147,21 @@ public class GameWindow {
                 tile.setBackground(Color.WHITE);
 
                 switch (cell) {
-                    case EMPTY:
+                    case CellType.EMPTY:
                         tile.setText("");
                         break;
-                    case GREY_SHIP:
-                        Image greyImg = new ImageIcon(getClass().getResource("./greyrocket.png")).getImage();
+                    case CellType.GREY_SHIP:
+                        Image greyImg = new ImageIcon(getClass().getResource("/resources/greyrocket.png")).getImage();
                         greyRocket = new ImageIcon(greyImg.getScaledInstance(70, 70, Image.SCALE_SMOOTH));
                         tile.setIcon(greyRocket);
                         break;
-                    case BLUE_SHIP:
-                        Image blueImg = new ImageIcon(getClass().getResource("./bluerocket.png")).getImage();
+                    case CellType.BLUE_SHIP:
+                        Image blueImg = new ImageIcon(getClass().getResource("/resources/bluerocket.png")).getImage();
                         blueRocket = new ImageIcon(blueImg.getScaledInstance(70, 70, Image.SCALE_SMOOTH));
                         tile.setIcon(blueRocket);
                         break;
-                    case BLACK_HOLE:
-                        Image holeImg = new ImageIcon(getClass().getResource("./blackhole.png")).getImage();
+                    case CellType.BLACK_HOLE:
+                        Image holeImg = new ImageIcon(getClass().getResource("/resources/blackhole.png")).getImage();
                         blackHole = new ImageIcon(holeImg.getScaledInstance(70, 70, Image.SCALE_SMOOTH));
                         tile.setIcon(blackHole);
                         break;
