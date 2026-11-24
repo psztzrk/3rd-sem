@@ -23,14 +23,6 @@ public class Game {
         return currentPlayer;
     }
 
-    public int getGreyAbsorbed() {
-        return greyAbsorbed;
-    }
-
-    public int getBlueAbsorbed() {
-        return blueAbsorbed;
-    }
-
     public MoveResult makeMove(int row, int col, Direction direction){
         // csak a current jtekos hajoja mozoghat
         if (board.getCell(row, col) != currentPlayer) {
