@@ -19,6 +19,8 @@ public class GameWindow {
     private Game game;
     private JComboBox<Integer> sizeSelector;
     private JLabel statusLabel;
+    private int selectedRow = -1;
+    private int selectedCol = -1;
 
     public GameWindow(){
         createWindow();
@@ -34,22 +36,12 @@ public class GameWindow {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
-        // felso text
-        JPanel topPanel = new JPanel(new BorderLayout());
-
-        textLabel.setFont(new Font("Arial", Font.PLAIN, 40));
-        textLabel.setHorizontalAlignment(JLabel.CENTER);
-        textLabel.setText("The Blackhole game!");
-        //textLabel.setOpaque(true);
-        topPanel.add(textLabel, BorderLayout.NORTH);
-
         // valaszto legordulo menu
         JPanel menuPanel = new JPanel();
-
         JLabel sizeLabel = new JLabel("Board size:");
         sizeSelector = new JComboBox<>(new Integer[]{5, 7, 9});
         JButton startButton = new JButton("New game");
-
+        textLabel.setHorizontalAlignment(JLabel.CENTER);
         statusLabel = new JLabel("Start a new game!");
 
         menuPanel.add(statusLabel);
@@ -57,9 +49,17 @@ public class GameWindow {
         menuPanel.add(sizeSelector);
         menuPanel.add(startButton);
 
-        topPanel.add(menuPanel, BorderLayout.NORTH);
+        frame.add(menuPanel, BorderLayout.NORTH);
 
-        frame.add(topPanel, BorderLayout.NORTH);
+        // start button actionkezelo
+        startButton.addActionListener(e -> {
+            int selectedSize = (int) sizeSelector.getSelectedItem();
+            createBoard(selectedSize);
+        });
+
+        // tabla
+        boardPanel = new JPanel();
+        frame.add(boardPanel, BorderLayout.CENTER);
 
         //iranyitos gombok
         JPanel controlPanel = new JPanel();
@@ -76,13 +76,11 @@ public class GameWindow {
 
         frame.add(controlPanel, BorderLayout.SOUTH);
         frame.add(boardPanel, BorderLayout.CENTER);
-        // start button
-        startButton.addActionListener(e -> {
-            int selectedSize = (int) sizeSelector.getSelectedItem();
-            createBoard(selectedSize);
-        });
 
-        //TODO actionlisteners
+        upButton.addActionListener(e -> moveSelectedShip(Direction.UP));
+        downButton.addActionListener(e -> moveSelectedShip(Direction.DOWN));
+        leftButton.addActionListener(e -> moveSelectedShip(Direction.LEFT));
+        rightButton.addActionListener(e -> moveSelectedShip(Direction.RIGHT));
 
         createBoard(size);
         frame.setVisible(true);
@@ -102,15 +100,44 @@ public class GameWindow {
         boardPanel.setBackground(Color.BLACK);
         for (int row = 0; row < size; row++)
         {
-            for (int col = 0; col < size; col++)
-            {
+            for (int col = 0; col < size; col++) {
                 JButton tile = new JButton();
-                tile.setFocusable(false);
                 tile.setBorder(BorderFactory.createLineBorder(Color.GRAY));
                 board[row][col] = tile;
-                tile.setFocusable(false);
+                final int r = row;
+                final int c = col;
 
-                CellType cell = gameBoard.getCells(row, col);
+                tile.addActionListener(e -> selectCell(r, c));
+
+                boardPanel.add(tile);
+            }
+        }
+
+        statusLabel.setText("New" + size + "x" + size + "game!");
+
+        // frissites
+        updateBoard();
+
+        boardPanel.revalidate();
+        boardPanel.repaint();
+
+        frame.revalidate();
+        frame.repaint();
+
+        statusLabel.setText("Blue player's turn!");
+
+    }
+
+    private void updateBoard(){
+        for (int row = 0; row < game.getBoard().getSize(); row++) {
+            for (int col = 0; col < game.getBoard().getSize(); col++) {
+
+                CellType cell = game.getBoard().getCell(row, col);
+                JButton tile = board[row][col];
+
+                tile.setText("");
+                tile.setIcon(null);
+                tile.setBackground(Color.WHITE);
 
                 switch (cell) {
                     case EMPTY:
@@ -132,22 +159,81 @@ public class GameWindow {
                         tile.setIcon(blackHole);
                         break;
                 }
-                boardPanel.add(tile);
             }
         }
+    }
 
-        statusLabel.setText("New" + size + "x" + size + "game!");
+    private  void selectCell(int row, int col){
+        CellType cell = game.getBoard().getCell(row, col);
 
-        // frissites
-        boardPanel.revalidate();
-        boardPanel.repaint();
+        if (cell == CellType.GREY_SHIP || cell == CellType.BLUE_SHIP){
+            selectedRow = row;
+            selectedCol = col;
 
-        frame.revalidate();
-        frame.repaint();
+            updateBoard();
+
+            board[row][col].setBackground(Color.GREEN);
+        }
+    }
+
+    private void moveSelectedShip(Direction direction) {
+
+        // Ha nincs kiválasztott hajó
+        if (selectedRow == -1 || selectedCol == -1) {
+            JOptionPane.showMessageDialog(frame,
+                    "Select a ship first!");
+            return;
+        }
+
+        MoveResult result = game.makeMove(
+                selectedRow, selectedCol, direction);
+
+        if (result == MoveResult.BLOCKED) {
+            JOptionPane.showMessageDialog(frame,
+                    "The ship cannot move in this direction!");
+        }
+
+        if (result == MoveResult.ABSORBED) {
+            JOptionPane.showMessageDialog(frame,
+                    "The ship was absorbed by the black hole!");
+
+            selectedRow = -1;
+            selectedCol = -1;
+        }
+
+        if (result == MoveResult.MOVED) {
+            // Megkeressük, hol van most a hajó
+            selectedRow = -1;
+            selectedCol = -1;
+        }
+
+        if (game.gameOver()) {
+
+            CellType winner = game.getWinner();
+
+            String winnerName = winner == CellType.BLUE_SHIP
+                    ? "Blue"
+                    : "Grey";
+
+            JOptionPane.showMessageDialog(frame,
+                    winnerName + " player wins!");
+
+            statusLabel.setText(winnerName + " wins!");
+
+            createBoard(5);
+            return;
+        }
+
+        updateBoard();
+
+        statusLabel.setText("Current player: " +
+                (game.getCurrentPlayer() == CellType.BLUE_SHIP
+                        ? "Blue"
+                        : "Grey"));
+
 
     }
 
 
-
-
 }
+

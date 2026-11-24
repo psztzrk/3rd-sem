@@ -49,7 +49,74 @@ public class Board {
         return size;
     }
 
-    public CellType getCells(int row, int col) {
+    public CellType getCell(int row, int col) {
         return cells[row][col];
     }
+
+    public MoveResult moveShip(int row, int col, Direction direction){
+        CellType ship = cells[row][col];
+
+        if (ship != CellType.BLUE_SHIP && ship != CellType.GREY_SHIP)
+        {
+            return MoveResult.BLOCKED;
+        }
+
+        int currentRow = row;
+        int currentCol = col;
+
+        while(true){
+            int nextRow = currentRow;
+            int nextCol = currentCol;
+
+            switch (direction){
+                case UP:
+                    nextRow--;
+                    break;
+
+                case DOWN:
+                    nextRow++;
+                    break;
+
+                case LEFT:
+                    nextCol--;
+                    break;
+
+                case RIGHT:
+                    nextCol++;
+                    break;
+            }
+
+            // ne lepjen ki a tablarol
+            if(nextRow < 0 || nextRow >= size || nextCol < 0 || nextCol >= size){
+                break;
+            }
+
+            CellType nextCell = cells[nextRow][nextCol];
+
+            // ha feketelyuk
+            if(nextCell == CellType.BLACK_HOLE){
+                cells[currentRow][currentCol] = CellType.EMPTY;
+                return MoveResult.ABSORBED;
+            }
+
+            // ha hajoba megy
+            if(nextCell != CellType.EMPTY){
+                break;
+            }
+
+            //mozgas
+            cells[nextRow][nextCol] = ship;
+            cells[currentRow][currentCol] = CellType.EMPTY;
+
+            currentRow = nextRow;
+            currentCol = nextCol;
+        }
+
+        if (currentRow == row && currentCol == col){
+            return MoveResult.BLOCKED;
+        }
+
+        return MoveResult.MOVED;
+    }
+
 }
