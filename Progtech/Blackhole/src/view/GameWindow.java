@@ -211,7 +211,6 @@ public class GameWindow {
         }
 
         if (result == MoveResult.MOVED) {
-            // Megkeressük, hol van most a hajó
             selectedRow = -1;
             selectedCol = -1;
         }
