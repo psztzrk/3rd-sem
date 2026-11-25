@@ -11,23 +11,25 @@ import javax.swing.*;
 
 public class GameWindow {
 
-    private JFrame frame;
+    //valtozok
     private int boardWidth = 700;
     private int boardHeight = 750;
     private int size = 5;
+    private int selectedRow = -1;
+    private int selectedCol = -1;
     private String turner;
-    ImageIcon blueRocket;
-    ImageIcon greyRocket;
-    ImageIcon blackHole;
+    private Game game;
+    //ablakos valtozok/cuccok
+    private JFrame frame;
     JLabel textLabel = new JLabel();
     JPanel textPanel = new JPanel();
     JPanel boardPanel = new JPanel();
     JButton[][] board;
-    private Game game;
     private JComboBox<Integer> sizeSelector;
     private JLabel statusLabel;
-    private int selectedRow = -1;
-    private int selectedCol = -1;
+    ImageIcon blueRocket;
+    ImageIcon greyRocket;
+    ImageIcon blackHole;
 
     public GameWindow(){
         createWindow();
